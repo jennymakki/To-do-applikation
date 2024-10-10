@@ -12,13 +12,12 @@ div {
     background-color: #ffffff;
 }
 
-
 body {
-background: linear-gradient(10deg, #fa7373, #fbe4e4);
-background-repeat: no-repeat;
-min-height: 100vh;
-display: flex;
-justify-content: center;
+    background: linear-gradient(10deg, #fa7373, #fbe4e4);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 
 .container {
@@ -26,9 +25,8 @@ justify-content: center;
     padding: 0px;
     width: 540px;
     height: 30vh;
-    position:absolute;
+    position: absolute;
     animation: fadeIn 1s;
-    
 }
 
 li {
@@ -42,8 +40,7 @@ li {
     transition: color 0.5s;
 }
 
-ul
-{
+ul {
     background-color:#ffffff;
     border-color: #ffffff;
     padding: 10;
@@ -60,8 +57,8 @@ ul
 }
 
 p {
-font-family: arial;
-animation: fadeIn 2s;
+    font-family: arial;
+    animation: fadeIn 2s;
 }
 
 button {
@@ -76,7 +73,7 @@ input {
 #infoText {
     color: red;
     background-color: #ffffff;
-    font-style:italic;
+    font-style: italic;
     font-family: Arial;
 }
 
