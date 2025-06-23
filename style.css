@@ -50,6 +50,11 @@ ul {
     padding-bottom: 15px;
 }
 
+span.text:hover {
+    text-decoration: line-through;
+    cursor: pointer;
+}
+
 .completed span.text  {
     color:grey;
     text-decoration: line-through;
@@ -63,6 +68,10 @@ p {
 
 button {
     animation: fadeIn 2.5s;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 input {
@@ -79,6 +88,14 @@ input {
 
 .alert {
     animation: alert 0.5s 3;
+}
+
+.trashcan {
+    padding-left: 1rem;
+}
+
+.trashcan:hover {
+    cursor: pointer;
 }
 
 @keyframes fadeIn {

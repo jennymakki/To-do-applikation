@@ -1,22 +1,14 @@
-
-console.log("Testing the JS");
-
-// Declare variables
 let completedCount = 0;
 let todoID = 1;
 
 const todoArray = [];
 
-// Declare HTML element
 const inputTodo = document.querySelector("#inputTodo");
 const addBtn = document.querySelector("#addBtn");
-const infoTodo = document.querySelector ("#infoTodo");
+const infoTodo = document.querySelector ("#infoText");
 const todoList = document.querySelector ("ul");
 const countTodo = document.querySelector ("#countTodo");
 
-
-
-// Function for changing status on todoItem
 function changeStatus(completed){
 
     let changeIndex = 0;
@@ -28,10 +20,8 @@ function changeStatus(completed){
 addBtn.addEventListener(
     "click", 
     function(){
-        //get value from input
         const text = inputTodo.value;
 
-        // condition: check input not empty.
          if(text.length == 0)
         {
             infoText.innerText = "Input must not be empty";
@@ -45,7 +35,6 @@ addBtn.addEventListener(
             infoText.innerText = "";
         }  
 
-        // add new html element in ul.
         const listItem = document.createElement("li");
         todoList.appendChild(listItem);
 
@@ -81,22 +70,22 @@ addBtn.addEventListener(
             countTodo.innerHTML = `${completedCount} completed`;
             });
 
-        // add listener to trashcan
         trashcan.addEventListener(
         "click",
         function(){
+            if (listItem.getAttribute("class") === "completed") {
+                completedCount--;
+                countTodo.innerHTML = `${completedCount} completed`;
+            }
             listItem.remove();
         });
          
-       //Add array
        const todoObject = {};
        todoObject.id =todoID;
        todoObject.name = text;
        todoObject.completed = false;
        todoArray.push(todoObject);
-       // console.log(todoArray);
 
-       // set input empty
        todoID++;
        inputTodo.value = "";
     
